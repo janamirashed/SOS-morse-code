@@ -1,3 +1,5 @@
+#include <Arduino.h>
+
 // SOS symbols: "... --- ..."
 
 int timeUnit = 400; // one time unit in milliseconds
@@ -20,11 +22,13 @@ int wordSpaceTime = timeUnit * 7;
 
 int ledPin = 8; // pin assigned to the LED positive.
 
+void sMorseCode();
+void oMorseCode();
+void sosMorseCode();
 
 void setup() {
     pinMode(ledPin, OUTPUT);
 }
-
 
 void loop() {
     sosMorseCode();
